@@ -1,0 +1,127 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.3
+ **/
+* { 
+    sys-font:                    "Meslo Nerd Font 12";
+    text:                        rgba ( 217, 224, 238, 100 % );
+    red:                         rgba ( 243, 139, 168, 100 % );
+    blue:                        rgba ( 137, 180, 250, 100 % );
+    background:                  rgba ( 26, 24, 38, 100 % );
+    selected-active-foreground:  var(text);
+    separatorcolor:              var(text);
+    urgent-foreground:           var(red);
+    background-color:            transparent;
+    border-color:                var(blue);
+    normal-background:           var(background);
+    selected-urgent-background:  var(red);
+    spacing:                     2;
+    urgent-background:           var(background);
+    selected-normal-foreground:  var(blue);
+    active-foreground:           var(text);
+    selected-active-background:  var(blue);
+    active-background:           var(background);
+    selected-normal-background:  rgba( 87, 82, 104, 100 % );
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(text);
+}
+
+configuration{
+    modi: "run,drun,window";
+    lines: 5;
+    show-icons: true;
+    icon-theme: "Oranchelo";
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: " Apps ";
+    display-run: " Run ";
+    display-window: " Window ";
+    sidebar-mode: true;
+}
+
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element {
+    padding: 5px;
+    cursor: pointer;
+    text-color: var(text);
+    border-radius: 10px;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  var(selected-normal-background) ;
+    text-color: var(selected-normal-foreground)  ;
+}
+
+window {
+    font:             var(sys-font);
+    background-color: var(background);
+    border:           1px;
+    border-radius:    10px;
+    height:           360px;
+}
+mainbox {
+    background-color: var(background);
+}
+textbox {
+    text-color: var(text);
+}
+listview {
+    padding:      6px 0px 0px ;
+    margin: 10px 10px 0px 10px ;
+    scrollbar:    false;
+    fixed-height: 0;
+    columns: 2;
+}
+button {
+    cursor:     pointer;
+    spacing:    0;
+    text-color: var(normal-foreground);
+    margin: 20px 0px 20px 0px;
+}
+button selected {
+    text-color:       var(selected-normal-foreground);
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: Gray;
+}
+inputbar {
+    padding:    2px;
+    text-color: var(normal-foreground);
+    children:   [ "prompt", "entry" ];
+    background-color: var(background);
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    padding: 6px;
+    margin: 10px 0px 0px 10px;
+    text-color:        var(normal-foreground);
+    cursor:            text;
+    spacing:           2px;
+}
+prompt {
+    spacing:    0;
+    text-color: var(background);
+    background-color: var(blue);
+    padding: 6px;
+    margin: 10px 0px 0px 10px;
+    border-radius: 10px;
+}
+mode-switcher {
+    spacing: 0;
+  }
