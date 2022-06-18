@@ -1,0 +1,13 @@
+# Ignore All
+/*
+
+# Except:
+
+!.gitignore
+!alacritty/
+!i3/
+!nvim/
+!picom/
+!polybar/
+!rofi/
+
